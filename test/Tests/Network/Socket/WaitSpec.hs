@@ -92,7 +92,7 @@ spec = do
 
 #ifdef linux_HOST_OS
     H.it "returns false if there is a connection timeout" $ \_ -> do
-      W.connectAction "93.184.216.34" 80 `H.shouldReturn` False
+      W.connectAction "127.0.0.1" 32104 `H.shouldReturn` False  -- note: tiny chance for flake
 #endif
 
   H.describe "waitM" $ do
